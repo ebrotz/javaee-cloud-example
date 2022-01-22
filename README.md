@@ -1,0 +1,10 @@
+# javaee-cloud-example
+
+This project aims to demonstrate multiple Java EE applications integrated
+with proper external services.
+
+## Current issues
+
+* keycloak's DB password is in plain text.
+* mariadb's root password is in plain text.
+* The keycloak user is created with a fixed password in the DB setup script

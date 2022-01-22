@@ -1,0 +1,30 @@
+---
+version: "3.9"
+services:
+  wildfly:
+    image: "jboss/wildfly:25.0.0.Final"
+    networks:
+      - "example"
+  keycloak:
+    image: "jboss/keycloak:16.1.0"
+    environment:
+      DB_ADDR: "mariadb"
+      DB_VENDOR: "mariadb"
+      DB_PASSWORD: "keycloak"
+    networks:
+      - "example"
+  mariadb:
+    image: "mariadb:10.3.32"
+    environment:
+      MARIADB_ROOT_PASSWORD: root
+    volumes:
+      - "./keycloak-db-setup.sql:/docker-entrypoint-initdb.d/keycloak-db-setup.sql"
+      - "db-data:/var/lib/mysql"
+    networks:
+      - "example"
+
+volumes:
+  db-data:
+
+networks:
+  example:
