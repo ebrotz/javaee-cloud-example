@@ -7,7 +7,12 @@ services:
       - "example"
     ports:
       - "8080:8080"
-      - "9990:9990"
+  app2:
+    build: "./javaee-example-app2"
+    networks:
+      - "example"
+    ports:
+      - "8081:8080"
   keycloak:
     image: "jboss/keycloak:16.1.0"
     environment:
@@ -15,7 +20,7 @@ services:
       DB_VENDOR: "mariadb"
       DB_PASSWORD: "keycloak"
     ports:
-      - "8081:8080"
+      - "8082:8080"
     networks:
       - "example"
   mariadb:

@@ -8,6 +8,6 @@ import javax.ws.rs.core.Response;
 public class HelloController {
     @GET
     public Response hello() {
-        return Response.ok("Hello World!").build();
+        return Response.ok("Hello from application 2!").build();
     }
 }
