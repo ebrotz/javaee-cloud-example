@@ -7,6 +7,12 @@ with proper external services.
 
     docker-compose -f ./external-services.yaml up --build -d
 
+## Things to try
+
+* Application security via Keycloak
+* API Gateway with Kong
+* TLS for all transports
+
 ## Current issues
 
 * keycloak's DB password is in plain text.
