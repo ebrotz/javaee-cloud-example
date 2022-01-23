@@ -2,7 +2,7 @@
 version: "3.9"
 services:
   app1:
-    image: "app1"
+    build: "./javaee-example-app1"
     networks:
       - "example"
     ports:
