@@ -19,6 +19,8 @@ services:
       DB_ADDR: "mariadb"
       DB_VENDOR: "mariadb"
       DB_PASSWORD: "keycloak"
+      KEYCLOAK_USER: "admin"
+      KEYCLOAK_PASSWORD: "admin"
     ports:
       - "8082:8080"
     networks:
