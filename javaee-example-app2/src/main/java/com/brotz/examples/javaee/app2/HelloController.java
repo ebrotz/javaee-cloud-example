@@ -1,4 +1,4 @@
-package com.brotz.examplesjavaee.app2;
+package com.brotz.examples.javaee.app2;
 
 import javax.ws.rs.GET;
 import javax.ws.rs.Path;
