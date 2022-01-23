@@ -5,12 +5,17 @@ services:
     image: "jboss/wildfly:25.0.0.Final"
     networks:
       - "example"
+    ports:
+      - "8080:8080"
+      - "9990:9990"
   keycloak:
     image: "jboss/keycloak:16.1.0"
     environment:
       DB_ADDR: "mariadb"
       DB_VENDOR: "mariadb"
       DB_PASSWORD: "keycloak"
+    ports:
+      - "8081:8080"
     networks:
       - "example"
   mariadb:
