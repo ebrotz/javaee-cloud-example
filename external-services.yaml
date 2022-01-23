@@ -1,8 +1,8 @@
 ---
 version: "3.9"
 services:
-  wildfly:
-    image: "jboss/wildfly:25.0.0.Final"
+  app1:
+    image: "app1"
     networks:
       - "example"
     ports:
