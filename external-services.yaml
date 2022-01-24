@@ -7,6 +7,8 @@ services:
       - "example"
     ports:
       - "8080:8080"
+    volumes:
+      - "./standalone.xml:/opt/jboss/wildfly/standalone/configuration/standalone.xml"
   app2:
     build: "./javaee-example-app2"
     networks:
