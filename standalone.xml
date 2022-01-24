@@ -345,7 +345,7 @@
         <subsystem xmlns="urn:wildfly:elytron-oidc-client:1.0">
             <secure-deployment name="app1.war">
                 <realm>example</realm>
-                <auth-server-url>http://keycloak:8080/auth/</auth-server-url>
+                <auth-server-url>http://host.docker.internal:8082/auth/</auth-server-url>
                 <public-client>true</public-client>
                 <ssl-required>EXTERNAL</ssl-required>
                 <client-id>app1</client-id>
